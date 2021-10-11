@@ -1,38 +1,302 @@
-.App {
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color:rgb(239, 236, 236);
+}
+
+.center{
+  display: flex;
+  margin:0 auto;
+  padding:0 2%;
+  max-width: 1100px;
+}
+
+.header{
+  padding:10px 0;
+  background-color:white;
+  border-bottom:2px solid rgb(230,230,230);
+}
+
+.header__logo{
+  width:40%;
+  margin-top: 5px;
+}
+
+.header__loginForm{
+  width:55%;
+  text-align: right;
+}
+
+.header__loginForm form{
+  display: inline-block;
+}
+
+.header__loginForm input[type=text],
+.header__loginForm input[type=password]{
+  width:180px;
+  margin-right: 5px;
+  height:20px;
+  border:1px solid #ccc;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+.header__loginForm input[type=submit]{
+  background-color: #0095f6;
+  color:white;
+  border:0;
+  height:20px;
+  padding:0px 10px;
+  cursor:pointer;
+  border-radius:10px;
+  font-size: 14px;
+}
+
+.header__loginForm form a{
+  background-color: #0095f6;
+  color:white;
+  border:0;
+  height:20px;
+  padding:0px 10px;
+  cursor:pointer;
+  border-radius:10px;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 2px 6px; 
+  margin-left: 5px;
+}
+
+.btn__criarConta a{
+  font-size: 14px;
+  margin:0 10px;
+}
+
+.header__logadoInfo{
+  text-align: right;
+  width:50%;
+  margin-top: 7px;  
+}
+
+.header__logadoInfo a{
+  margin:0 10px;
+  background-color: #0095f6;
+  color:white;
+  text-decoration: none;
+  padding:3px 10px;
+  cursor:pointer;
+  border-radius:10px;
+  font-size: 14px;
+}
+
+.postSingle .NaoLogado p{
+  color:#0095f6;;
+  padding-top: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.modalCriarConta{
+  display: none;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background-color: rgba(0,0,0,0.5);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.formCriarConta{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  background-color:white;
+  padding:20px;
+  width:80%;
+  max-width: 700px;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.formCriarConta input{
+  width:100%;
+  height: 30px;
+  margin-bottom:10px;
+  padding-left: 10px;
+  border:1px solid #ccc;
+}
+
+.formCriarConta input[type=submit]{
+  background-color: #0095f6;
+  cursor: pointer;
+  color:white;
+}
+
+.close-modal-criar{
+  position: absolute;
+  right:-10px;
+  top:-10px;
+  cursor: pointer;
+  width:30px;
+  text-align: center;
+  color:white;
+  line-height: 30px;
+  height:30px;
+  border-radius:15px;
+  background-color: #0095f6;
+}
+
+
+
+.modalUpload{
+  display: none;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.formUpload{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  background-color:white;
+  padding:20px;
+  width:80%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.formUpload input{
+  width:100%;
+  height: 30px;
+  margin-bottom:10px;
+  padding-left: 10px;
+  border:1px solid #ccc;
+}
+
+.formUpload input[type=submit]{
+  background-color: #0095f6;
+  cursor: pointer;
+  color:white;
+}
+
+.close-modal-criar{
+  position: absolute;
+  right:-10px;
+  top:-10px;
+  cursor: pointer;
+  width:30px;
+  text-align: center;
+  color:white;
+  line-height: 30px;
+  height:30px;
+  border-radius:15px;
+  background-color: #0095f6;
+}
+
+.postSingle{
+  padding-bottom:40px;
+  background-color: white;
+  max-width: 700px;
+  margin:10px auto;
+
+}
+
+.postSingle input[type="text"]{
+  max-height: 36px;
+  font-size: 15px;
+  padding:10px;
+}
+
+.postSingle img{
+  width:100%;
+}
+
+.postSingle .perfil img{
+  margin-bottom: 10px
+}
+
+.postSingle p{
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.postSingle .perfil p{
+  padding-top: 25px;
+  padding-left: 20px;
+}
+
+.postSingle form{padding:20px;}
+.postSingle input[type="text"]{
+  width:100%;
+  height:120px;
+  border:1px solid #ccc;
+  padding:10px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  border-right: none;
+
+}
+
+
+.postSingle input[type=submit]{
+  background-color: white;
+  cursor: pointer;
+  color:#0095f6;
+  border: 1px solid black;
+  border-left: none;
+  padding: 0 10px;
+  font-size: 13px;
+  max-height: 36px;
+}
+
+.perfil{
+  display:flex;
+}
+
+.envioComentario{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.perfil img{
+  max-width: 40px;
+  max-height: 40px;
+  cursor:pointer;
+  border-radius: 100px;
+  margin-top: 14px;
+  margin-left: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.postSingle i{
+  font-size: 25px;
+  padding: 0 5px;
+  margin-left: 20px;
+  margin-top: 10px;
+  cursor:pointer;
+}
+
+.coments{
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.coment-single p{
+  font-size: 14px;
+}
+
+.postSingle .post p{
+  padding-left: 30px;
+  font-size: 16px;
+  padding-top: 20px;
+}
+
+form p{
+  color:black
 }
